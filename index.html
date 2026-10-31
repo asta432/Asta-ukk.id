@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Asta Maulida - Siswi Kelas 12 TKJ 1</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins & Fredoka -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelPink: '#FFD1DC',
+                        pastelPurple: '#E8D5C4',
+                        pastelBlue: '#D4F0F0',
+                        pastelCream: '#FFF5E4',
+                        accentPink: '#FF9EAA',
+                        accentPurple: '#B39DDB',
+                        darkText: '#333333',
+                    },
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'cursive', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FAFAFA;
+            color: #333333;
+            overflow-x: hidden;
+        }
+
+        /* Animasi Hiasan Mengambang (Donat, Es Krim, Hewan Lucu) */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(6deg); }
+        }
+        @keyframes floatMedium {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(-6deg); }
+        }
+
+        .floating-1 { animation: floatSlow 4s ease-in-out infinite; }
+        .floating-2 { animation: floatMedium 3.5s ease-in-out infinite 0.5s; }
+        .floating-3 { animation: floatSlow 4.5s ease-in-out infinite 1s; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFB6C1;
+            border-radius: 10px;
+        }
+
+        /* Cute Card Effect */
+        .cute-card {
+            background: rgba(255, 255, 255, 0.98);
+            border: 2px solid #FFF0F5;
+            box-shadow: 0 10px 25px -5px rgba(255, 182, 193, 0.25), 0 8px 10px -6px rgba(255, 182, 193, 0.1);
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white;
+            }
+            .cute-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen relative text-slate-700 pb-12">
+
+    <!-- Floating Cute Decorative Elements (Donuts, Ice Creams, Animals) -->
+    <div class="no-print pointer-events-none fixed inset-0 overflow-hidden z-0">
+        <div class="absolute top-10 left-5 text-4xl floating-1 opacity-80" title="Ice Cream">🍦</div>
+        <div class="absolute top-14 right-8 text-5xl floating-2 opacity-80" title="Donut">🍩</div>
+        <div class="absolute top-1/3 left-8 text-4xl floating-3 opacity-80 hidden md:block" title="Cute Cat">🐱</div>
+        <div class="absolute top-1/2 right-10 text-4xl floating-1 opacity-80 hidden md:block" title="Bunny">🐰</div>
+        <div class="absolute bottom-36 left-12 text-5xl floating-2 opacity-80" title="Ice Cream Sundae">🍨</div>
+        <div class="absolute bottom-28 right-16 text-4xl floating-3 opacity-80" title="Donut">🍩</div>
+        <div class="absolute top-2/3 left-1/4 text-3xl floating-2 opacity-40 hidden lg:block">🐾</div>
+        <div class="absolute top-1/4 right-1/4 text-3xl floating-1 opacity-40 hidden lg:block">🐾</div>
+    </div>
+
+    <!-- Header / Tombol Akses Cetak PDF -->
+    <header class="no-print sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-pink-100 py-3 px-4 shadow-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🍦</span>
+                <h1 class="font-fredoka text-xl text-pink-500 font-bold tracking-wide">CV Asta Maulida</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="window.print()" class="flex items-center gap-2 bg-gradient-to-r from-pink-400 to-purple-400 hover:from-pink-500 hover:to-purple-500 text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <i class="fas fa-print"></i> Cetak / Simpan PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 max-w-4xl mx-auto p-4 sm:p-6 lg:p-8 my-4 space-y-6">
+        
+        <!-- 1. Header Profile Card -->
+        <div class="cute-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-pink-100 rounded-full blur-2xl -z-10"></div>
+            <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-purple-100 rounded-full blur-2xl -z-10"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+                <!-- Foto Profil Pas Foto Merah -->
+                <div class="relative group">
+                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-tr from-pink-300 via-purple-300 to-pink-200 shadow-lg relative">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-red-600 flex items-center justify-center relative border-2 border-white">
+                            <img src="file_0000000085e481fd952ffa86b6d9e61d.png" alt="Asta Maulida" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e62129/ffffff?text=Asta+Maulida';">
+                        </div>
+                    </div>
+                    <!-- Cute Emoji Badge -->
+                    <div class="absolute bottom-1 right-1 bg-white p-2 rounded-full shadow-md text-xl border-2 border-pink-200 floating-2">
+                        🐱
+                    </div>
+                </div>
+
+                <!-- Profile Info Header -->
+                <div class="text-center md:text-left flex-1">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-100 text-pink-600 font-medium text-xs sm:text-sm mb-2">
+                        <span>🍦</span> Siswi Kelas 12 TKJ 1
+                    </div>
+                    <h1 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
+                        Asta Maulida
+                    </h1>
+                    <p class="text-pink-500 font-semibold text-base sm:text-lg mt-1">
+                        Teknik Komputer dan Jaringan (TKJ)
+                    </p>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-2 flex items-center justify-center md:justify-start gap-1.5">
+                        <i class="fas fa-school text-pink-400"></i> SMK MA'ARIF NU TIRTO
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Grid Container (Profil, Pendidikan, Pengalaman & Kemampuan) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Left Column: Profil Saya & Pendidikan -->
+            <div class="space-y-6">
+                <!-- Profil Saya Section -->
+                <div class="cute-card rounded-2xl p-6">
+                    <h2 class="font-fredoka text-xl font-bold text-slate-800 border-b-2 border-pink-200 pb-2 mb-4 flex items-center gap-2">
+                        <span class="text-2xl">🐰</span> Profil Saya
+                    </h2>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-justify">
+                        Saya adalah siswi kelas 12 TKJ 1 SMK MA'ARIF NU TIRTO jurusan teknik komputer dan jaringan ( TKJ ). Memiliki pengetahuan dasar mengenai perakitan komputer, instalasi sistem operasi, jaringan komputer, serta mampu mengoperasikan komputer dengan baik. Teliti, Disiplin, mampu bekerja sama dalam tim, Dan siap bekerja sebagai operator produksi dengan penuh tanggung jawab.
+                    </p>
+                </div>
+
+                <!-- Pendidikan Section -->
+                <div class="cute-card rounded-2xl p-6">
+                    <h2 class="font-fredoka text-xl font-bold text-slate-800 border-b-2 border-purple-200 pb-2 mb-4 flex items-center gap-2">
+                        <span class="text-2xl">🎓</span> Pendidikan
+                    </h2>
+                    <div class="space-y-4">
+                        <!-- SMK -->
+                        <div class="relative pl-4 border-l-2 border-purple-300 py-1">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-purple-400 rounded-full border-4 border-white"></div>
+                            <h3 class="font-bold text-slate-800 text-sm">SMK MA'ARIF NU TIRTO</h3>
+                            <p class="text-xs text-purple-600 font-semibold mt-0.5">Kelas 12 TKJ 1</p>
+                            <span class="inline-block mt-1 px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 text-[11px] font-medium">
+                                2024 - 2026
+                            </span>
+                        </div>
+
+                        <!-- SMP -->
+                        <div class="relative pl-4 border-l-2 border-pink-300 py-1">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-pink-400 rounded-full border-4 border-white"></div>
+                            <h3 class="font-bold text-slate-800 text-sm">SMPN 01 TIRTO</h3>
+                            <div class="mt-1">
+                                <span class="inline-block px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700 text-[11px] font-bold">
+                                    ✓ LULUS
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- SD -->
+                        <div class="relative pl-4 border-l-2 border-blue-300 py-1">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-blue-400 rounded-full border-4 border-white"></div>
+                            <h3 class="font-bold text-slate-800 text-sm">SDN 01 Dadirejo</h3>
+                            <div class="mt-1">
+                                <span class="inline-block px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700 text-[11px] font-bold">
+                                    ✓ LULUS
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Pengalaman & Kemampuan -->
+            <div class="md:col-span-2 space-y-6">
+
+                <!-- Pengalaman Section -->
+                <div class="cute-card rounded-2xl p-6 relative">
+                    <span class="absolute top-4 right-4 text-2xl no-print">🍩</span>
+                    <h2 class="font-fredoka text-xl font-bold text-slate-800 border-b-2 border-pink-200 pb-2 mb-4 flex items-center gap-2">
+                        <span class="text-2xl">💼</span> Pengalaman
+                    </h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 bg-pink-50/50 p-3 rounded-xl border border-pink-100/60 hover:bg-pink-50 transition-colors">
+                            <span class="text-pink-400 font-bold text-base mt-0.5">❯</span>
+                            <span class="text-slate-700 text-xs sm:text-sm">Melakukan instalasi dan konfigurasi jaringan LAN sederhana.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-purple-50/50 p-3 rounded-xl border border-purple-100/60 hover:bg-purple-50 transition-colors">
+                            <span class="text-purple-400 font-bold text-base mt-0.5">❯</span>
+                            <span class="text-slate-700 text-xs sm:text-sm">Mengoperasikan Microsoft office untuk membuat dokumen dan laporan.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-blue-50/50 p-3 rounded-xl border border-blue-100/60 hover:bg-blue-50 transition-colors">
+                            <span class="text-blue-400 font-bold text-base mt-0.5">❯</span>
+                            <span class="text-slate-700 text-xs sm:text-sm">Menginstal sistem operasi Windows.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-pink-50/50 p-3 rounded-xl border border-pink-100/60 hover:bg-pink-50 transition-colors">
+                            <span class="text-pink-400 font-bold text-base mt-0.5">❯</span>
+                            <span class="text-slate-700 text-xs sm:text-sm">Bekerja sama menyelesaikan tugas praktik bersama tim.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-purple-50/50 p-3 rounded-xl border border-purple-100/60 hover:bg-purple-50 transition-colors">
+                            <span class="text-purple-400 font-bold text-base mt-0.5">❯</span>
+                            <span class="text-slate-700 text-xs sm:text-sm">Melatih kedisiplinan serta tanggung jawab dalam menyelesaikan tugas.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kemampuan Section (Hard Skill & Soft Skill) -->
+                <div class="cute-card rounded-2xl p-6 relative">
+                    <span class="absolute top-4 right-4 text-2xl no-print">🍨</span>
+                    <h2 class="font-fredoka text-xl font-bold text-slate-800 border-b-2 border-purple-200 pb-2 mb-4 flex items-center gap-2">
+                        <span class="text-2xl">✨</span> Kemampuan (Skills)
+                    </h2>
+
+                    <!-- Hard Skill Grid -->
+                    <div class="mb-5">
+                        <h3 class="font-fredoka text-sm font-semibold text-purple-600 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <i class="fas fa-laptop-code"></i> Hard Skill :
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <div class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-100 bg-slate-50 text-xs text-slate-700">
+                                <span class="w-2 h-2 rounded-full bg-pink-400"></span>
+                                Mengoperasikan komputer dan laptop
+                            </div>
+                            <div class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-100 bg-slate-50 text-xs text-slate-700">
+                                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                                Instalasi Windows
+                            </div>
+                            <div class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-100 bg-slate-50 text-xs text-slate-700">
+                                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                                Konfigurasi jaringan dasar ( LAN )
+                            </div>
+                            <div class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-100 bg-slate-50 text-xs text-slate-700">
+                                <span class="w-2 h-2 rounded-full bg-pink-400"></span>
+                                Troubleshooting komputer
+                            </div>
+                            <div class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-100 bg-slate-50 text-xs text-slate-700 sm:col-span-2">
+                                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                                Perakitan komputer
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skill Grid -->
+                    <div>
+                        <h3 class="font-fredoka text-sm font-semibold text-pink-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <i class="fas fa-heart"></i> Soft Skill :
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-full bg-pink-100/70 text-pink-700 text-xs font-medium border border-pink-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Disiplin
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-purple-100/70 text-purple-700 text-xs font-medium border border-purple-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Teliti
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-blue-100/70 text-blue-700 text-xs font-medium border border-blue-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Bertanggung jawab
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-pink-100/70 text-pink-700 text-xs font-medium border border-pink-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Jujur
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-purple-100/70 text-purple-700 text-xs font-medium border border-purple-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Mampu bekerja sama dalam tim
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-blue-100/70 text-blue-700 text-xs font-medium border border-blue-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Cepat belajar
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-pink-100/70 text-pink-700 text-xs font-medium border border-pink-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Mampu bekerja di bawah tekanan
+                            </span>
+                            <span class="px-3 py-1.5 rounded-full bg-purple-100/70 text-purple-700 text-xs font-medium border border-purple-200 hover:scale-105 transition-transform cursor-default">
+                                🌸 Memiliki komunikasi yang baik
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3. KONTAK (TERLETAK DI PALING BAWAH HALAMAN) -->
+        <div class="cute-card rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-pink-50/70 via-white to-purple-50/70 border-pink-100">
+            <h2 class="font-fredoka text-2xl font-bold text-slate-800 border-b-2 border-pink-200 pb-3 mb-6 flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                <span class="text-3xl">📞</span> Informasi Kontak
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <!-- Telepon / WA -->
+                <a href="https://wa.me/6289531691918" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white border border-pink-100 shadow-sm hover:shadow-md hover:border-pink-300 transition-all group">
+                    <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium">No. HP / WhatsApp</p>
+                        <p class="font-bold text-slate-800 text-sm group-hover:text-emerald-600 transition-colors">089531691918</p>
+                    </div>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:astamaulida99@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-white border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-300 transition-all group">
+                    <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="text-xs text-slate-400 font-medium">Email</p>
+                        <p class="font-bold text-slate-800 text-xs sm:text-sm group-hover:text-purple-600 transition-colors truncate">astamaulida99@gmail.com</p>
+                    </div>
+                </a>
+
+                <!-- Alamat -->
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-blue-100 shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xl shrink-0">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium">Alamat Lengkap</p>
+                        <p class="font-bold text-slate-800 text-xs sm:text-sm">Desa Dadirejo Tirto Pekalongan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sweet Closing Tagline -->
+            <div class="mt-6 pt-4 border-t border-slate-100 text-center">
+                <p class="text-xs text-slate-400 flex items-center justify-center gap-2">
+                    <span>🍦</span> Siap Bekerja & Berkontribusi dengan Penuh Tanggung Jawab <span>🍩</span>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
